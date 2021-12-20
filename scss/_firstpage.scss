@@ -1,0 +1,85 @@
+.firstpage {
+	background-image: url('../assets/img-bgs/bg-1.jpg');
+
+	&__logo {
+		width: 191px;
+		height: 48px;
+		background-image: url('../assets/logo.svg');
+		@include bg-props;
+		margin: 0 auto 40px;
+
+		@include mob-screen {
+			width: 120px;
+			height: 30px;
+			margin: 0 auto 20px;
+		}
+	}
+
+	&__header {
+		font-size: 62px;
+		margin-bottom: 40px;
+
+		@include mob-screen {
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__scrollbutton {
+		width: 214px;
+		height: 56px;
+		font-size: 19px;
+		@include cyanbutton;
+
+		@include mob-screen {
+			width: 330px;
+			height: 48px;
+			font-size: 16px;
+		}
+	}
+
+	&__scrollbutton,
+	&__scrollbutton:hover,
+	&__scrollbutton:active {
+		text-decoration: none;
+	}
+
+	&__topshape {
+		@include cyanshape (138px, 194px, section_1-svg_1);
+		top: -47px;
+		right: 256px;
+
+		@include mob-screen {
+			@include cyanshape (89px, 127px, section_1-svg_1);
+			top: -7px;
+			left: -27px;
+			right: auto;
+		}
+	}
+
+	&__rightshape {
+		@include cyanshape (186px, 186px, section_1-svg_3);
+		bottom: 42px;
+		right: -41px;
+
+		@include mob-screen {
+			@include cyanshape (91px, 91px, section_1-svg_3);
+			bottom: 47px;
+			left: -13px;
+			right: auto;
+		}
+	}
+
+	&__leftshape {
+		@include cyanshape (220px, 174px, section_1-svg_2);
+		top: 256px;
+		left: -51px;
+
+		@include mob-screen {
+			@include cyanshape (100px, 79px, section_1-svg_2);
+			top: 164px;
+			left: auto;
+			right: -34px;
+		}
+	}
+}

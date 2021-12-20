@@ -1,0 +1,18 @@
+$transition: all .3s ease;
+
+$white:			#ffffff;
+$black:			#000000;
+$cyan:			#6CEEC7;
+$red:			#DA5050;
+$gray:			#5E5E5E;
+
+@font-face {
+	font-family: 'Rubik Medium';
+	src: url('../assets/fonts/Rubik-Medium.ttf');
+}
+$font-medium: 'Rubik Medium';
+@font-face {
+	font-family: 'Rubik Light';
+	src: url('../assets/fonts/Rubik-Light.ttf');
+}
+$font-light: 'Rubik Light';

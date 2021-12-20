@@ -1,0 +1,43 @@
+@use "sass:math";
+
+@mixin mob-screen {
+	@media only screen and (min-width: 360px) and (max-width: 575px) {
+		@content;
+	}
+}
+
+@mixin bg-props {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin cyanshape($width, $height, $filename) {
+	width: $width;
+	height: $height;
+	background-image: url('../assets/bg-forms/#{$filename}.svg');
+	@include bg-props;
+	z-index: 1;
+}
+
+@mixin cyanbutton {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 19px;
+	color: $cyan;
+	text-transform: capitalize;
+	border: 2px solid $cyan;
+	border-radius: 5px;
+	transition: $transition;
+	z-index: 2;
+
+	&:hover {
+		color: $black;
+		background-color: $cyan;
+	}
+}
+
+@mixin inputicon($filename) {
+	background: url('../assets/icons/#{$filename}.svg') no-repeat scroll 18px;
+}

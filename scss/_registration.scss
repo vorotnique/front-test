@@ -1,0 +1,287 @@
+.registration {
+	background-image: url('../assets/img-bgs/bg-2.jpg');
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 40px 0 12px;
+
+	@include mob-screen {
+		padding: 100px 0 12px;
+	}
+
+	&__header {
+		font-size: 24px;
+		margin-bottom: 55px;
+
+		@include mob-screen {
+			font-size: 19px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__formcontainer {
+		display: flex;
+		justify-content: center;
+
+		@include mob-screen {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__form {
+		font-family: $font-light;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 630px;
+		gap: 30px;
+
+		@include mob-screen {
+			justify-content: center;
+		}
+
+		&-wrapper {
+			position: relative;
+
+			&[data-scroll] {
+				transition: all 2s ease;
+			}
+
+			&[data-scroll="in"] {
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+			&[data-scroll="out"] {
+				transform: translateY(3rem);
+				opacity: 0;
+			}
+		}
+
+		&-span {
+			position: absolute;
+			right: 0;
+			bottom: -19px;
+			font-size: 10px;
+			color: $red;
+			font-family: $font-medium;
+		}
+
+		&-accordion {
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 22px;
+			right: 20px;
+			border-right: 1px solid white;
+			border-bottom: 1px solid white;
+			transform: rotate(45deg);
+		}
+
+		&-input {
+			border: 1px solid $white;
+			border-radius: 5px;
+			width: 300px;
+			height: 56px;
+			padding: 16px 23px 16px 50px;
+			color: $white;
+			font-size: 19px;
+
+			@include mob-screen {
+				width: 330px;
+			}
+
+			&::placeholder {
+				color: $white;
+			}
+
+			&-placeholder {
+				font-size: 19px;
+				position: absolute;
+				left: 0;
+
+				&::before {
+					content: attr(title);
+					position: absolute;
+					top: 14px;
+					text-align: left;
+					width: 300px;
+					padding-left: 50px;
+					transition: $transition;
+				}
+			}
+
+			&:focus {
+				outline: none;
+				border-color: $cyan;
+			}
+
+			&:focus + label::before,
+			&:valid + label::before {
+				color: $cyan;
+				font-size: 11px;
+				top: 5px;
+			}
+		}
+
+		&-firstname {
+			@include inputicon(first-name_icon);
+		}
+
+		&-secondname {
+			@include inputicon(second-name_icon);
+		}
+
+		&-country {
+			@include inputicon(country_icon);
+			-webkit-appearance: none;
+
+			option {
+				color: $gray;
+			}
+		}
+
+		&-phone {
+			@include inputicon(phone_icon);
+		}
+
+		&-password {
+			@include inputicon(password_icon);
+		}
+
+		&-passwordconfirm {
+			@include inputicon(confirm-password_icon);
+		}
+
+		&-email {
+			@include inputicon(email_icon);
+		}
+
+		&-checkbox {
+			width: 300px;
+			display: flex;
+			align-items: center;
+			transition: $transition;
+
+			@include mob-screen {
+				width: 330px;
+				margin: 10px 0 7px;
+			}
+
+			&-box {
+				display: none;
+			}
+
+			&-label {
+				display: flex;
+				font-size: 15px;
+
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					margin-right: 11px;
+					border: 1px solid $cyan;
+					border-radius: 3px;
+				}
+
+				&:hover::before {
+					background-color: $cyan;
+				}
+
+				&-unchecked {
+					&::before {
+						border-color: $red;
+						background-color: $red;
+					}
+				}
+			}
+
+			[type="checkbox"]:checked + &-label::before {
+				background: url('../assets/icons/check_icon.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $cyan;
+			}
+		}
+
+		&-submit {
+			width: 171px;
+			height: 56px;
+			background: none;
+			font-family: $font-medium;
+			@include cyanbutton;
+
+			@include mob-screen {
+				width: 330px;
+				color: $black;
+				background-color: $cyan;
+			}
+
+			&-wrapper {
+				width: 300px;
+				display: flex;
+				justify-content: flex-start;
+
+				@include mob-screen {
+					width: 330px;
+				}
+			}
+		}
+	}
+
+	&__login {
+		font-family: $font-light;
+		font-size: 15px;
+		padding-top: 10px;
+	}
+
+	&__link {
+		color: $cyan;
+		border-bottom: 1px solid $cyan;
+		padding-bottom: 3px;
+	}
+
+	&__link:active,
+	&__link:hover {
+		color: $cyan;
+		border: none;
+	}
+
+	&__rightshape {
+		@include cyanshape (220px, 174px, section_2-svg_2);
+		top: 124px;
+		right: -66px;
+
+		@include mob-screen {
+			@include cyanshape (113px, 90px, section_2-svg_2);
+			top: 5px;
+			right: -31px;
+		}
+	}
+
+	&__bottomshape {
+		@include cyanshape (186px, 186px, section_2-svg_3);
+		bottom: -32px;
+		right: 323px;
+
+		@include mob-screen {
+			@include cyanshape (110px, 110px, section_2-svg_3);
+			bottom: -49px;
+			right: -30px;
+		}
+	}
+
+	&__leftshape {
+		@include cyanshape (138px, 194px, section_2-svg_1);
+		top: 371px;
+		left: -26px;
+
+		@include mob-screen {
+			@include cyanshape (61px, 86px, section_2-svg_1);
+			top: 116px;
+			left: -18px;
+		}
+	}
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BestRest</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+			integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./js/plugins/jquery-nice-select-1.1.0/css/nice-select.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="./js/plugins/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
+		<script src="./js/plugins/scroll-out-master/dist/scroll-out.min.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="./js/script.js"></script>
+	</head>
+	<body>
+		<header class="firstpage section-bg">
+			<div class="container">
+				<div class="firstpage__logo"></div>
+				<h1 class="firstpage__header">
+					Find the <span class="cyantext">best place<br />to rest</span> while traveling
+				</h1>
+				<a href="#registration" class="firstpage__scrollbutton">registration</a>
+			</div>
+			<div class="cyanshape firstpage__topshape"></div>
+			<div class="cyanshape firstpage__rightshape"></div>
+			<div class="cyanshape firstpage__leftshape"></div>
+		</header>
+		<section class="registration section-bg" id="registration">
+			<div class="empty"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-2"></div>
+					<div class="col-xl-8 col-12">
+						<h3 class="registration__header">
+							<span class="cyantext">Sign Up</span> and find the best place to rest while traveling
+						</h3>
+						<div class="registration__formcontainer">
+							<form action="#" class="registration__form">
+								<div class="registration__form-wrapper">
+									<input
+										type="text"
+										id="firstname"
+										class="registration__form-input registration__form-firstname"
+										required
+									/>
+									<label for="firstname" class="registration__form-input-placeholder" title="First Name"></label>
+									<div class="registration__form-span hidden">The name must be more than 2 characters</div>
+								</div>
+								<div class="registration__form-wrapper">
+									<input
+										type="text"
+										id="secondname"
+										class="registration__form-input registration__form-secondname"
+										required
+									/>
+									<label for="secondname" class="registration__form-input-placeholder" title="Second Name"></label>
+									<div class="registration__form-span hidden">The name must be more than 2 characters</div>
+								</div>
+								<div class="registration__form-wrapper">
+									<select
+										name="country"
+										id="country"
+										class="registration__form-input registration__form-country"
+										required
+									>
+										<option value="" hidden>Country</option>
+									</select>
+									<div class="registration__form-span hidden">Fill in the field</div>
+									<!-- <div class="registration__form-accordion"></div> -->
+								</div>
+								<div class="registration__form-wrapper">
+									<input type="tel" id="phone" class="registration__form-input registration__form-phone" required />
+									<label for="phone" class="registration__form-input-placeholder" title="Phone"></label>
+									<div class="registration__form-span hidden">Fill in the field</div>
+								</div>
+								<div class="registration__form-wrapper">
+									<input
+										type="password"
+										id="password"
+										class="registration__form-input registration__form-password"
+										required
+									/>
+									<label for="password" class="registration__form-input-placeholder" title="Password"></label>
+									<div class="registration__form-span hidden">Password must have 1 letter, 1 number and one symbol</div>
+								</div>
+								<div class="registration__form-wrapper">
+									<input
+										type="password"
+										id="passwordConfirm"
+										class="registration__form-input registration__form-passwordconfirm"
+										required
+									/>
+									<label
+										for="passwordConfirm"
+										class="registration__form-input-placeholder"
+										title="Confirm password"
+									></label>
+									<div class="registration__form-span hidden">Password does not match</div>
+								</div>
+								<div class="registration__form-wrapper">
+									<input type="email" id="email" class="registration__form-input registration__form-email" required />
+									<label for="email" class="registration__form-input-placeholder" title="Email"></label>
+									<div class="registration__form-span hidden">Email is not correct</div>
+								</div>
+								<div class="registration__form-checkbox">
+									<input
+										type="checkbox"
+										name="confirm_checkbox"
+										id="confirm_checkbox"
+										class="registration__form-checkbox-box"
+										required
+									/>
+									<label for="confirm_checkbox" class="registration__form-checkbox-label"
+										>I agree to the&nbsp;<a href="#" class="registration__form-checkbox-label-link registration__link"
+											>Terms & Conditions</a
+										></label
+									>
+								</div>
+								<div class="registration__form-submit-wrapper">
+									<input type="submit" value="sign up" class="registration__form-submit" />
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+			</div>
+			<p class="registration__login">
+				If you have an account, <a href="#" class="registration__login-link registration__link">Log in</a>
+			</p>
+			<div class="cyanshape registration__rightshape"></div>
+			<div class="cyanshape registration__bottomshape"></div>
+			<div class="cyanshape registration__leftshape"></div>
+		</section>
+	</body>
+</html>
